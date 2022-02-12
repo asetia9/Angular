@@ -1,0 +1,17 @@
+<input type="text" ng-model="name"> {{name}}
+    <br>
+    <div ng-controller="simpleController">
+      <ul>
+        <li ng-repeat="shark in sharktank|filter:name|orderBy:'city'">
+          {{shark.name|uppercase}} - {{shark.age}}
+        </li>
+
+      </ul>
+      <input type="text" ng-model="new.name">
+      <input type="number" ng-model="new.age">
+      <button type="submit" ng-click="clickable()">
+        add
+      </button>
+
+    </div>
+    
